@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  user_service:
+    build: .
+    command: python services/user_service.py
+    ports:
+      - "5001:5000"
+
+  blog_service:
+    build: .
+    command: python services/blog_service.py
+    ports:
+      - "5002:5000"
+
+  comment_service:
+    build: .
+    command: python services/comment_service.py
+    ports:
+      - "5003:5000"
+      
